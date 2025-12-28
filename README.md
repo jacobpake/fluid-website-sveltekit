@@ -89,7 +89,7 @@ The component is used in other components or routes like:
 </div>
 ```
 
-The `onMount` call ensures that `loadFigure` is not called during server-side rendering, only in the browser (otherwise we would run into issues trying to update the DOM in a Node.js process).
+The script block is evaluated during server-side rendering. The `onMount` call ensures that `loadFigure` is not called on the server, only in the browser (otherwise we would run into issues trying to update the DOM in a Node.js process).
 
 If we separated our processing vs rendering work in Fluid, then we could change this to something like:
 
